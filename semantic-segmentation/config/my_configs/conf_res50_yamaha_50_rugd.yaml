@@ -1,0 +1,16 @@
+# Paths
+DATA_PATH: /home/nb1/spilkova/data/RUGD/rugd_split/test
+SAVE_MODEL_PATH: /home/nb1/spilkova/data/semantic-segmentation/runs/model_resnet50_v2.50.pt # Comment this out to autoname models
+LOAD_MODEL_PATH: /home/nb1/spilkova/data/semantic-segmentation/runs/model_resnet50_v2.50.pt
+
+# Image resize variables
+IMG_HEIGHT: 544
+IMG_WIDTH: 1024
+
+# Hyperparameters
+NUM_EPOCHS: 50
+NUM_MASK_CHANNELS: 8
+BATCH_SIZE: 3
+LEARNING_RATE: 1e-4
+IS_INCEPTION: true
+BACKBONE: resnet50 # mobilenetv3large, resnet50, resnet101

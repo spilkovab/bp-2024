@@ -1,0 +1,16 @@
+# Paths
+DATA_PATH: /home/nb1/spilkova/data/Rellis-3D
+SAVE_MODEL_PATH: /home/nb1/spilkova/data/semantic-segmentation/runs/model_v0.2.pt # Comment this out to autoname models
+LOAD_MODEL_PATH: /home/nb1/spilkova/data/semantic-segmentation/runs/mobilenetv3large_v1.50.pt
+
+# Image resize variables
+IMG_HEIGHT: 544
+IMG_WIDTH: 1024
+
+# Hyperparameters
+NUM_EPOCHS: 10
+NUM_MASK_CHANNELS: 8
+BATCH_SIZE: 10
+LEARNING_RATE: 1e-4
+IS_INCEPTION: true
+BACKBONE: mobilenetv3large # mobilenetv3large, resnet50, resnet101
