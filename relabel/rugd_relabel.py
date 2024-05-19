@@ -4,7 +4,7 @@ import torch
 import matplotlib.pyplot as plt
 import os
 
-#insert color palettes
+# color palettes
 color_palette_rugd = {
     0: {"color": [0, 0, 0], "name": "void"}, 
     1: {"color": [108, 64, 20], "name": "dirt"}, 
