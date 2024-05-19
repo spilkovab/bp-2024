@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os.path as op
 
+# collor palletes of classes
 color_palette_rellis = {
     0: {"color": [0, 0, 0],  "name": "void"},
     1: {"color": [108, 64, 20],   "name": "dirt"},
@@ -38,6 +39,12 @@ color_palette_yamaha = {
 }
 
 def apply_color_mapping(image_array, color_mapping):
+    """
+    This function applies the color mapping
+
+    Args: mask image to relabel, color mapping
+    Returns: mapped image
+    """
     mapped_image = np.zeros_like(image_array)
 
     for old_index, new_color in color_mapping.items():
@@ -47,11 +54,15 @@ def apply_color_mapping(image_array, color_mapping):
     return mapped_image
 
 
-def process_image_and_mask(image_folder, mask_folder, image_filename, mask_filename):
-
-    image_path = op.join(image_folder, image_filename)
+def process_image_and_mask(mask_folder, mask_filename):
+    """
+    This function processes the mask, creates new labels and saves the new mask
+    
+    Args: path to the mask/label folder, mask filename
+    
+    Returns: None
+    """
     mask_path = op.join(mask_folder, mask_filename)
-    print(image_path)
     print(image_folder)
     old_img = Image.open(mask_path)
     img_np = np.array(old_img)
@@ -67,12 +78,11 @@ Groups = [1, 6, 5, 2, 7, 4, 1, 7, 7, 6, 7, 7, 7, 7, 0, 6, 7, 3, 6, 3]           
 
 # Paths to images, masks, list
 mask_folder = "C:/Users/238750/OneDrive - Vysoké učení technické v Brně/BP/datasety/Rellis_3D_pylon_camera_node_label_color/Rellis-3D/"
-image_folder = "C:/Users/238750/OneDrive - Vysoké učení technické v Brně/BP/datasety/Rellis_3D_pylon_camera_node/Rellis-3D/"
 lst_file_path = "C:/Users/238750/OneDrive - Vysoké učení technické v Brně/BP/datasety/Rellis_3D_image_split/test.lst"
 
 with open(lst_file_path, 'r') as lst_file:
     for line in lst_file:
         image_filename, mask_filename = line.strip().split()
-        process_image_and_mask(image_folder, mask_folder, image_filename, mask_filename)
+        process_image_and_mask(mask_folder, mask_filename)
 
 
