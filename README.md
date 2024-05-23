@@ -4,7 +4,9 @@ This repository contains all performed experiments
 It is required to download RUGD, Rellis3D and YCOR datasets:  
 
 
-This work is mostly dependent on the work of Haddad and Mulay and was created purely for academic purposes  
+
+This work is mostly dependent on the work of Haddad and Mulay and was created purely for academic purposes, for more details please visit:  
+https://github.com/nmhaddad/semantic-segmentation/tree/master  
 
 
 ## File structure:  
